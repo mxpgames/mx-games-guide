@@ -1,6 +1,4 @@
-## MX Player Games Documentation
-
-### MX Player - HTML5 Games Integration
+## MX Player - HTML5 Games Integration
 
 ### Integration Steps:
 
