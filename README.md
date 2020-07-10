@@ -26,8 +26,6 @@ window.gameManager = {
 }
 ```
 
-### Let’s go through each of these methods:
-
 #### gameManager.onGameInit()
 
 This function returns few common parameters used across all games like:
