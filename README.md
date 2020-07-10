@@ -327,7 +327,7 @@ if (typeof gameManager !== 'undefined') {
 |                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 
 
-#### Game Manager Library SDK
+### Game Manager Library SDK
 
 This library would actually facilitate all the common functionalities required across all games. For start, the current version would contain the following functionalities:
 
