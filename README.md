@@ -290,7 +290,7 @@ if (typeof gameManager !== 'undefined') {
 }
 ```
 
-#### Base Analytics Events
+### Base Analytics Events
 
 | Event Name                      	| Parameters   	| Possible Values             	| Description                                                                                       	|
 |---------------------------------	|--------------	|-----------------------------	|---------------------------------------------------------------------------------------------------	|
