@@ -26,9 +26,9 @@ window.gameManager = {
 }
 ```
 
-Let’s go through each of these methods:
+### Let’s go through each of these methods:
 
-### gameManager.onGameInit()
+#### gameManager.onGameInit()
 
 This function returns few common parameters used across all games like:
 roomID, userID, gameID, highestScore, gameMode, isFirstOpen
@@ -62,7 +62,7 @@ var config = {
 }
 ```
 
-### gameManager.onGameStart()
+#### gameManager.onGameStart()
 
 This function has to be called by the web-view when the game is ready and set to play, to notify the App that the game is ready.
 
@@ -76,7 +76,7 @@ if (typeof gameManager !== 'undefined') {
 }
 ```
 
-### gameManager.getGameSettings()
+#### gameManager.getGameSettings()
 
 This function is called to get configurable parameters for the game. Many difficulty, powerup, probability etc can be configured to be received through this function. MX Player CMS takes these inputs and passes them onto the game through this function. This way, no code changes are required in the game parameters are to be altered.
 
@@ -111,7 +111,7 @@ module.exports = config
 
 **Note**: The data received is a stringified JSON
 
-### gameManager.onTrack()
+#### gameManager.onTrack()
 
 This function is used when the game wants to track events in the game.
 
@@ -133,7 +133,7 @@ if (typeof gameManager !== 'undefined') {
 **Note**: The data passed for tracking has to be a stringified JSON
 (Please contact us to get the list of events currently tracked)
 
-### gameManager.onError()
+#### gameManager.onError()
 
 This function is used to send errors that might occur in the game. The webview is automatically closed by the App when this method is called. 
 
@@ -151,7 +151,7 @@ if (typeof gameManager !== 'undefined') {
 
 **Note**: The parameter passed should be a string
 
-### gameManager.onCheckRewardedVideoAds()
+#### gameManager.onCheckRewardedVideoAds()
 
 This is a method which has to be called by the game whenever it wants to check if an ad can be shown or not. This method checks if an ad can be shown by checking many factors like ad unit, internet connectivity etc.
 
@@ -208,7 +208,7 @@ cc.game.emit('rewardAdsExist', {status: 1}) // To test flow: ad does not exists
 
 This will call the game method (onRewardedAdsCheck in the above example). 
 
-### gameManager.onShowRewardedVideoAds()
+#### gameManager.onShowRewardedVideoAds()
 
 This method starts the video ad on top of the game. The game should pause at this time and all sound effects should be stopped for the ad to play.
 
@@ -267,7 +267,7 @@ cc.game.emit('onAdPlayed', {status: 1}) // To test flow: ad does not exists
 This will call the game method (onAdPlayed in the above example).
 
 
-### gameManager.onGameOver()
+#### gameManager.onGameOver()
 
 This function is used when the game is over and needs to be closed. The game needs to send parameters like score, highScore etc. The parameters score and highScore need to be integers.
 
@@ -290,7 +290,7 @@ if (typeof gameManager !== 'undefined') {
 }
 ```
 
-### Base Analytics Events
+#### Base Analytics Events
 
 | Event Name                      	| Parameters   	| Possible Values             	| Description                                                                                       	|
 |---------------------------------	|--------------	|-----------------------------	|---------------------------------------------------------------------------------------------------	|
@@ -327,7 +327,7 @@ if (typeof gameManager !== 'undefined') {
 |                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 
 
-### Game Manager Library SDK
+#### Game Manager Library SDK
 
 This library would actually facilitate all the common functionalities required across all games. For start, the current version would contain the following functionalities:
 
