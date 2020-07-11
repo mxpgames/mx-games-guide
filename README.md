@@ -1,6 +1,6 @@
 ## MX Player - HTML5 Games Integration
 
-### Integration Steps:
+### Integration Steps
 
 The MXPlayer App opens the game in a web-view. These games are opened by the App in 2 ways:
 
