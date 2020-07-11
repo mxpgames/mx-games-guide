@@ -332,3 +332,5 @@ This library would actually facilitate all the common functionalities required a
 * Add a polyfill for `cc` namespace required for games made on other frameworks like PixieJS and PhaserJS.
 * iOS App cannot expose the `gameManager` object for the games. So instead this library would include functionalities which would enable iOS communication with iOS App without any change in game code.
 * All games require the sticky banners to be shown. This library wraps all the adRelated logic on one place and all the game has to do is define the position where the sticky ad has to be shown
+
+#### For Testing
