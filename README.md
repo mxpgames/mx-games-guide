@@ -346,7 +346,8 @@ The above script will include a namespace `MXGame` on the window scope (global s
         * `adRefreshDuration`- a number indicating the interval(in seconds) after which ads should refresh
    
     Below is an example with a dummy ad unit:
-
+    
+    
     ```
     "stickyBannersEnabled": true,
     "stickyAds": {
