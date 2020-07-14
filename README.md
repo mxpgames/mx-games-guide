@@ -325,10 +325,11 @@ if (typeof gameManager !== 'undefined') {
 |                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 
 
-### Game Manager Library SDK
+### Sticky Ads
 
-This library would actually facilitate all the common functionalities required across all games. For start, the current version would contain the following functionalities:
+For integration Sticky Ads the following steps has to be done:
 
-* Add a polyfill for `cc` namespace required for games made on other frameworks like PixieJS and PhaserJS.
-* iOS App cannot expose the `gameManager` object for the games. So instead this library would include functionalities which would enable iOS communication with iOS App without any change in game code.
-* All games require the sticky banners to be shown. This library wraps all the adRelated logic on one place and all the game has to do is define the position where the sticky ad has to be shown
+* Add the above JS Library to your index.html file
+    ```
+    <script src="mx-game-manager.js"></script>
+    ```
