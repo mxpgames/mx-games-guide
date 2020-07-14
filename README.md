@@ -345,21 +345,21 @@ The above script will include a namespace `MXGame` on the window scope (global s
         * `adWidth`- a number for the width of the ad 
         * `adRefreshDuration`- a number indicating the interval(in seconds) after which ads should refresh
    
-Below is an example with a dummy ad unit:
+    Below is an example with a dummy ad unit:
 
-```
-"stickyBannersEnabled": true,
-"stickyAds": {
-    "adUnit": "",
-    "adHeight": 50,
-    "adWidth": 320,
-    "adRefreshDuration": 30
-}
-```
+    ```
+    "stickyBannersEnabled": true,
+    "stickyAds": {
+        "adUnit": "",
+        "adHeight": 50,
+        "adWidth": 320,
+        "adRefreshDuration": 30
+    }
+    ```
 
 * In the game implementation, add the following snippet of code:
 
-    #### MXGame.stickyAds.initialize(callback)
+    * #### MXGame.stickyAds.initialize(callback)
     This function initializes the sticky ad. It accepts a function as a parameter. This function will be called when the stickyAds has been loaded or failed. An       object is passed to this function `{ adLoaded: true / false }`
     
     ```
@@ -375,7 +375,7 @@ Below is an example with a dummy ad unit:
     }
     ```
     
-    #### MXGame.stickyAds.setStickyAds(position)
+    * #### MXGame.stickyAds.setStickyAds(position)
     This function sets the position of the sticky ad. The function takes in a parameter position which can either be `top` or `bottom` string.
     
     ```
@@ -391,7 +391,7 @@ Below is an example with a dummy ad unit:
     }
     ```
     
-    #### MXGame.stickyAds.displayStickyAd()
+    * #### MXGame.stickyAds.displayStickyAd()
     This function brings the sticky ad to the viewport with a translated animation according to the position set by `MxGame.stickyAds.setStickyAds` method.
     
     ```
@@ -408,7 +408,7 @@ Below is an example with a dummy ad unit:
     }
     ```
     
-    #### MXGame.stickyAds.hideStickyAd()
+    * #### MXGame.stickyAds.hideStickyAd()
     This function can be used to hide the sticky banner. Some cases where a sticky banner need to be hidden can be like rewarded ads screen etc.
     
     ```
