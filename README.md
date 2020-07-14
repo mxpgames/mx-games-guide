@@ -339,11 +339,11 @@ The above script will include a namespace `MXGame` on the window scope (global s
 
 * Add the following parameters in the CMS config parameters
     * `stickyBannersEnabled` - a boolean which indicates whether to enable sticky ads or not.
-    * `stickyAds` - an object with the following properties:
-        * `adUnit` - a string containing the ad unit
-        * `adHeight` - a number for the height of the ad 
-        * `adWidth` - a number for the width of the ad 
-        * `adRefreshDuration` - a number indicating the interval(in seconds) after which ads should refresh
+    * `stickyAds`- an object with the following properties:
+        * `adUnit`- a string containing the ad unit
+        * `adHeight`- a number for the height of the ad 
+        * `adWidth`- a number for the width of the ad 
+        * `adRefreshDuration`- a number indicating the interval(in seconds) after which ads should refresh
    
 Below is an example with a dummy ad unit:
 
@@ -356,3 +356,67 @@ Below is an example with a dummy ad unit:
     "adRefreshDuration": 30
 }
 ```
+
+* In the game implementation, add the following snippet of code:
+
+    #### MXGame.stickyAds.initialize(callback)
+    
+    This function initializes the sticky ad. It accepts a function as a parameter. This function will be called when the stickyAds has been loaded or failed. An       object is passed to this function `{ adLoaded: true / false }`
+    
+    ```
+    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
+        function showAd(args) {
+            if(args.adLoaded) {
+                // Ad Load Success
+            } else {
+                // Ad Load Failed
+            }
+        }
+        MXGame.stickyAds.initialize(showAd);
+    }
+    ```
+    
+    #### MXGame.stickyAds.setStickyAds(position)
+    
+    This function sets the position of the sticky ad. The function takes in a parameter position which can either be `top` or `bottom` string.
+    
+    ```
+    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
+        function showAd(args) {
+            if(args.adLoaded) {
+                MXGame.stickyAds.setStickyAd('bottom');
+            } else {
+                // Ad Load Failed
+            }
+        }
+        MXGame.stickyAds.initialize(showAd);
+    }
+    ```
+    
+    #### MXGame.stickyAds.displayStickyAd()
+    
+    This function brings the sticky ad to the viewport with a translated animation according to the position set by `MxGame.stickyAds.setStickyAds` method.
+    
+    ```
+    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
+        function showAd(args) {
+            if(args.adLoaded) {
+                MXGame.stickyAds.setStickyAd('bottom');
+                MXGame.stickyAds.displayStickyAd();
+            } else {
+                // Ad Load Failed
+            }
+        }
+        MXGame.stickyAds.initialize(showAd);
+    }
+    ```
+    
+    #### MXGame.stickyAds.hideStickyAd()
+    
+    This function can be used to hide the sticky banner. Some cases where a sticky banner need to be hidden can be like rewarded ads screen etc.
+    
+    ```
+    function hideAds() {
+        MXGame.stickyAds.hideStickyAd();
+    }
+    ```
