@@ -330,6 +330,7 @@ if (typeof gameManager !== 'undefined') {
 For integration Sticky Ads the following steps has to be done:
 
 * Add the above JS Library to your index.html file
-    ```
-    <script src="mx-game-manager.js"></script>
-    ```
+
+```
+<script src="mx-game-manager.js"></script>
+```
