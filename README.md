@@ -188,7 +188,7 @@ Inside the method the implementation would look something like this:
 
 ```
 onRewardedAdsCheck: function (result) {
-    if (result.statyus === 0) {
+    if (result.status === 0) {
         // Ad can be shown
     } else {
         // Ad cannot be shown
