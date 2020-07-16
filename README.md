@@ -246,7 +246,7 @@ Inside the method the implementation would look something like this:
 
 ```
 adPlayed: function (result) {
-    if (result.statyus === 0) {
+    if (result.status === 0) {
         // Ad can be shown
     } else {
         // Ad cannot be shown
@@ -346,7 +346,6 @@ For integration Sticky Ads the following steps has to be done:
         * `adRefreshDuration`- a number indicating the interval(in seconds) after which ads should refresh
    
     Below is an example with a dummy ad unit:
-    
     
     ```
     "stickyBannersEnabled": true,
