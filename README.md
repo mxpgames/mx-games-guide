@@ -17,7 +17,7 @@ When the web-view opens a game, it passes an object `gameManager` to the window 
 window.gameManager = {
     onGameInit: function() {},
     onGameStart: function() {},
-    onGameSettings: function() {},
+    getGameSettings: function() {},
     onTrack: function() {},
     onError: function() {},
     onCheckRewardedVideoAds: function() {},
