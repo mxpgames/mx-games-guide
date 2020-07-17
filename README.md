@@ -422,8 +422,52 @@ For integration Sticky Ads the following steps has to be done:
 
 Events:
     
-   * `backPressed` - Device back button was pressed
+   * `backPressed`- Device back button was pressed
     
    ```
-   cc.game.on('backPressed', function() {});
+   cc.game.on('backPressed', function(result) {});
    ```
+   
+   * `screenOn`- Device screen turned on
+    
+   ```
+   cc.game.on('screenOn', function(result) {});
+   ```
+   
+   * `screenOff`- Device screen turned off
+    
+   ```
+   cc.game.on('screenOff', function(result) {});
+   ```
+   
+   * `userPresent`- User unlocks device
+    
+   ```
+   cc.game.on('userPresent', function(result) {});
+   ```
+   
+   * `pagePause`- Activity onPause
+    
+   ```
+   cc.game.on('pagePause', function(result) {});
+   ```
+   
+   * `pageResume`- Activity onResume 
+    
+   ```
+   cc.game.on('pageResume', function(result) {});
+   ```
+   
+   * `homePressed`- Device home button was pressed
+    
+   ```
+   cc.game.on('homePressed', function(result) {});
+   ```
+   
+   * `recentPressed`- Device recentApps button was pressed
+    
+   ```
+   cc.game.on('recentPressed', function(result) {});
+   ```
+   
+**Note**: `result` is in json format. In the above events, there is no need to check the `result`.
