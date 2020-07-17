@@ -421,8 +421,9 @@ For integration Sticky Ads the following steps has to be done:
 `Only for Android` The host app will call the following js function(s) when the corresponding event is received.
 
 Events:
-    * `backPressed`: Device back button was pressed.
     
-    ```
-    cc.game.on('backPressed', function() {})
-    ```
+   * `backPressed` - Device back button was pressed
+    
+   ```
+   cc.game.on('backPressed', function() {});
+   ```
