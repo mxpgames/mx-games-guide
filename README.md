@@ -422,6 +422,7 @@ For integration Sticky Ads the following steps has to be done:
 
 Events:
     * `backPressed`: Device back button was pressed.
+    
     ```
     cc.game.on('backPressed', function() {})
     ```
