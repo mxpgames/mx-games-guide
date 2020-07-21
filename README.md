@@ -272,9 +272,9 @@ This function is used when the game is over and needs to be closed. The game nee
 ```
 if (typeof gameManager !== 'undefined') {
     var obj = {
-        gameID: String(cc.sys.localStorage.getItem('JuegoJumpgameId')),
-        roomID: String(cc.sys.localStorage.getItem('JuegoJumproomId')),
-        userID: String(cc.sys.localStorage.getItem('JuegoJumpgameId')),
+        gameID: String(cc.sys.localStorage.getItem('gameId')),
+        roomID: String(cc.sys.localStorage.getItem('roomId')),
+        userID: String(cc.sys.localStorage.getItem('userId)),
         score: this.score,
         highScore: highScore,
         info: encryption.getInfo(this.totalScore, this.gameplayTimeInSecond, reviveCount)
