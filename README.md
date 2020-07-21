@@ -274,7 +274,7 @@ if (typeof gameManager !== 'undefined') {
     var obj = {
         gameID: String(cc.sys.localStorage.getItem('gameId')),
         roomID: String(cc.sys.localStorage.getItem('roomId')),
-        userID: String(cc.sys.localStorage.getItem('userId)),
+        userID: String(cc.sys.localStorage.getItem('userId')),
         score: this.score,
         highScore: highScore,
         info: encryption.getInfo(this.totalScore, this.gameplayTimeInSecond, reviveCount)
