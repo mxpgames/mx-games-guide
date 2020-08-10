@@ -277,7 +277,7 @@ if (typeof gameManager !== 'undefined') {
         userID: String(cc.sys.localStorage.getItem('userId')),
         score: this.score,
         highScore: highScore,
-        info: encryption.getInfo(this.totalScore, this.gameplayTimeInSecond, reviveCount)
+        info: encryption.getInfo(this.score, this.gameplayTimeInSecond, reviveCount)
     }
     try {
         var score = JSON.stringify(obj)
