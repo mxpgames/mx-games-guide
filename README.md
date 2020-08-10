@@ -272,9 +272,9 @@ This function is used when the game is over and needs to be closed. The game nee
 ```
 if (typeof gameManager !== 'undefined') {
     var obj = {
-        gameID: String(cc.sys.localStorage.getItem('gameId')),
-        roomID: String(cc.sys.localStorage.getItem('roomId')),
-        userID: String(cc.sys.localStorage.getItem('userId')),
+        gameId: String(cc.sys.localStorage.getItem('gameId')),
+        roomId: String(cc.sys.localStorage.getItem('roomId')),
+        userId: String(cc.sys.localStorage.getItem('userId')),
         score: this.score,
         highScore: highScore,
         info: encryption.getInfo(this.score, this.gameplayTimeInSecond, reviveCount)
@@ -292,36 +292,36 @@ if (typeof gameManager !== 'undefined') {
 
 | Event Name                      	| Parameters   	| Possible Values             	| Description                                                                                       	|
 |---------------------------------	|--------------	|-----------------------------	|---------------------------------------------------------------------------------------------------	|
-| gameStart                       	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Game Start                   	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gameStart                       	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+| On Game Start                   	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| startType    	| “first” / “new” / “restart” 	| first - First Session -> onGameInit().isFirstOpen / new - Returning user / restart - Restart Game 	|
 |                                 	|              	|                             	|                                                                                                   	|
-| gamePause                       	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On play after paused            	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gamePause                       	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+| On play after paused            	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| currentTime  	| Type - Integer              	| No: of seconds paused                                                                             	|
 |                                 	|              	|                             	|                                                                                                   	|
-| gameExit                        	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Game Over                    	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gameExit                        	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+| On Game Over                    	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| currentScore 	| Type - Integer              	| Game Score                                                                                        	|
 |                                 	| highScore    	| Type - Integer              	| Received from onGameInit()                                                                        	|
 |                                 	| playTime     	| Type - Integer              	| No: of seconds played                                                                             	|
 |                                 	| adClaimed    	|  0/1                        	| 0 - Ad not claimed 1 - Ad claimed                                                                 	|
 |                                 	|              	|                             	|                                                                                                   	|
-| gameAdShown                     	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Watch Ad screen shown        	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gameAdShown                     	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+| On Watch Ad screen shown        	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	|              	|                             	|                                                                                                   	|
-| gameAdClicked                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gameAdClicked                   	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 |                                 	|              	|                             	|                                                                                                   	|
-| gameAdClaimed                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On completion or quitting of Ad 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
+| gameAdClaimed                   	| userId       	| N/A                         	| Received from onGameInit()                                                                        	|
+| On completion or quitting of Ad 	| gameId       	| N/A                         	| Received from onGameInit()                                                                        	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 
 
