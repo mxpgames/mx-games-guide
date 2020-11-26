@@ -159,7 +159,7 @@ if (typeof gameManager !== 'undefined' &&
     typeof gameManager.onCheckRewardedVideoAds === 'function'
 ) {
     try {
-        gameManager.onCheckRewardedVideoAd('rewardAdsExist')
+        gameManager.onCheckRewardedVideoAds('rewardAdsExist')
     } catch (e) {
         gameManager.onError(e.stack.toString())
     }
