@@ -247,9 +247,9 @@ Inside the method the implementation would look something like this:
 ```
 adPlayed: function (result) {
     if (result.status === 0) {
-        // Ad can be shown
+        // completely watched the ad. can give reward
     } else {
-        // Ad cannot be shown
+        // did not watch the ad completely. no reward
     }
 }
 ```
