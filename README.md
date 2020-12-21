@@ -216,7 +216,7 @@ if (typeof gameManager !== 'undefined' &&
     typeof gameManager.onShowRewardedVideoAds === 'function'
 ) {
     try {
-        gameManager.onShowRewardedVideoAds('rewardLife', null)
+        gameManager.onShowRewardedVideoAds('onAdPlayed', null)
     } catch (e) {
         gameManager.onError(e.stack.toString())
     }
