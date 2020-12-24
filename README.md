@@ -312,24 +312,17 @@ if (typeof gameManager !== 'undefined') {
 |                                 	|              	|                             	|                                                                                                   	|
 | gameAdShown                     	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
 | On Watch Ad screen shown        	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                   
-
-|                                 	| position      | "start"/ "mid" / "end"        | start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end
-
+|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	|              	|                             	|                                                                                                   	|
 | gameAdClicked                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed             
-
-|                                 	| position      | "start"/ "mid" / "end"        | start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end                     	|
-
+|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 |                                 	|              	|                             	|                                                                                                   	|
 | gameAdClaimed                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
 | On completion or quitting of Ad 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
 |                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed
-|                                 	| position      | "start"/ "mid" / "end"        | start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end
+|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
 
 
 ### Sticky Ads
@@ -478,4 +471,3 @@ Events:
    ```
    
 **Note**: `result` is in json format. In the above events, there is no need to check the `result`.
-
