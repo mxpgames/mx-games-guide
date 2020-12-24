@@ -290,40 +290,42 @@ if (typeof gameManager !== 'undefined') {
 
 ### Base Analytics Events
 
-| Event Name                      	| Parameters   	| Possible Values             	| Description                                                                                       	|
-|---------------------------------	|--------------	|-----------------------------	|---------------------------------------------------------------------------------------------------	|
-| gameStart                       	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Game Start                   	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| startType    	| “first” / “new” / “restart” 	| first - First Session -> onGameInit().isFirstOpen / new - Returning user / restart - Restart Game 	|
-|                                 	|              	|                             	|                                                                                                   	|
-| gamePause                       	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On play after paused            	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| currentTime  	| Type - Integer              	| No: of seconds paused                                                                             	|
-|                                 	|              	|                             	|                                                                                                   	|
-| gameExit                        	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Game Over                    	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| currentScore 	| Type - Integer              	| Game Score                                                                                        	|
-|                                 	| highScore    	| Type - Integer              	| Received from onGameInit()                                                                        	|
-|                                 	| playTime     	| Type - Integer              	| No: of seconds played                                                                             	|
-|                                 	| adClaimed    	|  0/1                        	| 0 - Ad not claimed 1 - Ad claimed                                                                 	|
-|                                 	|              	|                             	|                                                                                                   	|
-| gameAdShown                     	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On Watch Ad screen shown        	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	|              	|                             	|                                                                                                   	|
-| gameAdClicked                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
-|                                 	|              	|                             	|                                                                                                   	|
-| gameAdClaimed                   	| userID       	| N/A                         	| Received from onGameInit()                                                                        	|
-| On completion or quitting of Ad 	| gameID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                        	|
-|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                  	|
-
+| Event Name                      	| Parameters   	| Possible Values             	| Description                                                                                                        	|
+|---------------------------------	|--------------	|-----------------------------	|--------------------------------------------------------------------------------------------------------------------	|
+| gameStart                       	| userId       	| N/A                         	| Received from onGameInit()                                                                                         	|
+| On Game Start                   	| gameId       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| startType    	| “first” / “new” / “restart” 	| first - First Session -> onGameInit().isFirstOpen / new - Returning user / restart - Restart Game                  	|
+|                                 	|              	|                             	|                                                                                                                    	|
+| gamePause                       	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+| On play after paused            	| gameID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| currentTime  	| Type - Integer              	| No: of seconds paused                                                                                              	|
+|                                 	|              	|                             	|                                                                                                                    	|
+| gameExit                        	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+| On Game Over                    	| gameID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| currentScore 	| Type - Integer              	| Game Score                                                                                                         	|
+|                                 	| highScore    	| Type - Integer              	| Received from onGameInit()                                                                                         	|
+|                                 	| playTime     	| Type - Integer              	| No: of seconds played                                                                                              	|
+|                                 	| adClaimed    	|  0/1                        	| 0 - Ad not claimed 1 - Ad claimed                                                                                  	|
+|                                 	|              	|                             	|                                                                                                                    	|
+| gameAdShown                     	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+| On Watch Ad screen shown        	| gameID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| position     	| "start"/"mid"/"end"         	| start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end 	|
+|                                 	|              	|                             	|                                                                                                                    	|
+| gameAdClicked                   	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| gameID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                                   	|
+|                                 	| position     	| "start"/"mid"/"end"         	| start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end 	|
+|                                 	|              	|                             	|                                                                                                                    	|
+| gameAdClaimed                   	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
+| On completion or quitting of Ad 	| gameId       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| roomId       	| N/A                         	| Received from onGameInit()                                                                                         	|
+|                                 	| autoPlayed   	| 0/1                         	| If autoplay of Ad is enabled. 0 - Not Autoplayed  1 - Autoplayed                                                   	|
+|                                 	| position     	| "start"/"mid"/"end"         	| start for ads shown at the beginning of the game, mid for ad shown during the game and end for ad shown at the end 	|
 
 ### Sticky Ads
 
