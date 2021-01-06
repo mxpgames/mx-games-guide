@@ -335,7 +335,7 @@ For integration of Sticky Ads the following steps has to be done:
     * `stickyBannersEnabled`- a boolean which indicates whether to enable sticky ads or not.
        
     ```
-    "stickyBannersEnabled": true,
+    "stickyBannersEnabled": true
     ```
 
 * After the game is loaded, use the following snippet of code to show the sticky ads:
@@ -356,6 +356,7 @@ For integration of Sticky Ads the following steps has to be done:
     Note: App sends the event `adShown` or `adNotShown` when `showStickyAds` function is called. You can make minor position adjustments in the Game when these events are received. Ad size mostly is 320 X 50.
 
     To hide sticky ads at anytime use this function:
+
     ```
     gameManager.hideStickyAds()
     ```
