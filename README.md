@@ -329,94 +329,35 @@ if (typeof gameManager !== 'undefined') {
 
 ### Sticky Ads
 
-For integration Sticky Ads the following steps has to be done:
+For integration of Sticky Ads the following steps has to be done:
 
-* Add the above JS Library to your index.html file
-
-    ```
-    <script src="mx-game-manager.js"></script>
-    ```
-
-    The above script will include a namespace `MXGame` on the window scope (global scope). All the required functions are within this `MXGame` namespace.
-
-* Add the following parameters in the CMS config parameters
+* Add the following parameter in the CMS config parameters
     * `stickyBannersEnabled`- a boolean which indicates whether to enable sticky ads or not.
-    * `stickyAds`- an object with the following properties:
-        * `adUnit`- a string containing the ad unit
-        * `adHeight`- a number for the height of the ad 
-        * `adWidth`- a number for the width of the ad 
-        * `adRefreshDuration`- a number indicating the interval(in seconds) after which ads should refresh
-   
-    Below is an example with a dummy ad unit:
-    
+       
     ```
     "stickyBannersEnabled": true,
-    "stickyAds": {
-        "adUnit": "",
-        "adHeight": 50,
-        "adWidth": 320,
-        "adRefreshDuration": 30
-    }
     ```
 
-* In the game implementation, add the following snippet of code:
+* After the game is loaded, use the following snippet of code to show the sticky ads:
+    
+    ```
+    if (config.stickyBannersEnabled === true && typeof gameManager !== 'undefined' && typeof gameManager.showStickyAds === 'function') {
+            cc.game.on('adShown', () => {
+                /* do something when ad is shown after showStickyAds call */
+            })
+            cc.game.on('adNotShown', () => {
+                /* do something when ad is not shown after showStickyAds call */
+            })
+            gameManager.showStickyAds('bottom')
+    }
+    ```
+    When `showStickyAds` function is called with a position parameter, it shows an ad at that position which can either be `top` or `bottom`.
 
-    * #### MXGame.stickyAds.initialize(callback)
-    This function initializes the sticky ad. It accepts a function as a parameter. This function will be called when the stickyAds has been loaded or failed. An       object is passed to this function `{ adLoaded: true / false }`
-    
+    Note: App sends the event `adShown` or `adNotShown` when `showStickyAds` function is called. You can make minor position adjustments in the Game when these events are received. Ad size mostly is 320 X 50.
+
+    To hide sticky ads at anytime use this function:
     ```
-    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
-        function showAd(args) {
-            if(args.adLoaded) {
-                // Ad Load Success
-            } else {
-                // Ad Load Failed
-            }
-        }
-        MXGame.stickyAds.initialize(showAd);
-    }
-    ```
-    
-    * #### MXGame.stickyAds.setStickyAds(position)
-    This function sets the position of the sticky ad. The function takes in a parameter position which can either be `top` or `bottom` string.
-    
-    ```
-    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
-        function showAd(args) {
-            if(args.adLoaded) {
-                MXGame.stickyAds.setStickyAd('bottom');
-            } else {
-                // Ad Load Failed
-            }
-        }
-        MXGame.stickyAds.initialize(showAd);
-    }
-    ```
-    
-    * #### MXGame.stickyAds.displayStickyAd()
-    This function brings the sticky ad to the viewport with a translated animation according to the position set by `MxGame.stickyAds.setStickyAds` method.
-    
-    ```
-    if(config.stickyBannersEnabled === true && MXGame !== undefined && MXGame.stickyAds !== undefined) {
-        function showAd(args) {
-            if(args.adLoaded) {
-                MXGame.stickyAds.setStickyAd('bottom');
-                MXGame.stickyAds.displayStickyAd();
-            } else {
-                // Ad Load Failed
-            }
-        }
-        MXGame.stickyAds.initialize(showAd);
-    }
-    ```
-    
-    * #### MXGame.stickyAds.hideStickyAd()
-    This function can be used to hide the sticky banner. Some cases where a sticky banner need to be hidden can be like rewarded ads screen etc.
-    
-    ```
-    function hideAds() {
-        MXGame.stickyAds.hideStickyAd();
-    }
+    gameManager.hideStickyAds()
     ```
 
 ### Notify Game Events
