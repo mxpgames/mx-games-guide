@@ -308,12 +308,12 @@ if (typeof gameManager !== 'undefined') {
 |                                 	| currentScore 	| Type - Integer              	| Game Score                                                                                                         	|
 |                                 	| highScore    	| Type - Integer              	| Received from onGameInit()                                                                                         	|
 |                                 	| playTime     	| Type - Integer              	| No: of seconds played                                                                                              	 |
-|                                 	| adGameStartOpportunity |  Type - Integer      | No. of opportunities to show ad at start of the game                                                                  |
-|                                 	| adGameStartShown    	 |  Type - Integer      | No. of times option to see ad is shown at start of the game                                                            |
-|                                 	| adGameStartClaimed     |  Type - Integer      | No. of times ad is claimed at start of the game                                                                        |
-|                                 	| adGameEndOpportunity   |  Type - Integer      | No. of opportunities to show ad at the end of the game                                                                |
-|                                 	| adGameEndShown    	 |  Type - Integer      | No. of times option to see ad is shown at end of the game                                                              |
-|                                 	| adGameEndClaimed    	 |  Type - Integer      | No. of times ad is claimed at the end of the game                                                                      |
+|                                 	| adGameStartOpportunity |  Type - Integer      | No. of times option to watch ad is shown at the start of the game                                                                  |
+|                                 	| adGameStartShown    	 |  Type - Integer      | No. of times ad is shown at the start of the game                                                            |
+|                                 	| adGameStartClaimed     |  Type - Integer      | No. of times ad is successfully claimed at start of the game                                                                        |
+|                                 	| adGameEndOpportunity   |  Type - Integer      | No. of times option to watch ad is shown at the end of the game                                                                |
+|                                 	| adGameEndShown    	 |  Type - Integer      | No. of times ad is shown at end of the game                                                              |
+|                                 	| adGameEndClaimed    	 |  Type - Integer      | No. of times ad is successfully claimed at the end of the game                                                                      |
 |                                 	| adGamePowerupClaimed   |  Type - Integer      | No. of times ad is claimed to earn a powerup in mid of the game                                                        |
 |                                 	|              	|                             	|                                                                                                                    	|
 | gameAdShown                     	| userID       	| N/A                         	| Received from onGameInit()                                                                                         	|
