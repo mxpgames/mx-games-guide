@@ -53,7 +53,7 @@ var config = {
    gameId: "2",
    roomId: "3",
    highestScore: 90,
-   lastLevel: 0,
+   lastLevel: 0, // user's current level
    gameMode: "score", // "score" or "win"
    isFirstOpen: true, // true or false
    roomType: "free_room" // "free_room" or "priced_room"
@@ -277,7 +277,9 @@ if (typeof gameManager !== 'undefined') {
         userID: String(cc.sys.localStorage.getItem('userID')),
         score: this.score,
         highScore: highScore,
-        info: encryption.getInfo(this.score, this.gameplayTimeInSecond, reviveCount)
+        lastLevel: lastLevel,
+        info: encryption.getInfo(lastLevel, this.gameplayTimeInSecond, reviveCount), // only for level based games
+        info: encryption.getInfo(this.score, this.gameplayTimeInSecond, reviveCount) // for other games
     }
     try {
         var score = JSON.stringify(obj)
@@ -308,6 +310,7 @@ if (typeof gameManager !== 'undefined') {
 |                                 	| currentScore 	| Type - Integer              	| Game Score                                                                                                         	|
 |                                 	| highScore    	| Type - Integer              	| Received from onGameInit()                                                                                         	|
 |                                 	| playTime     	| Type - Integer              	| No: of seconds played                                                                                              	 |
+|                                 	| lastLevel     | Type - Integer              	| For level based games. Indicates levels that the user has completed.                                                  |
 |                                 	| adGameStartOpportunity |  Type - Integer      | No. of times option to watch ad is shown at the start of the game                                                                  |
 |                                 	| adGameStartShown    	 |  Type - Integer      | No. of times ad is shown at the start of the game                                                            |
 |                                 	| adGameStartClaimed     |  Type - Integer      | No. of times ad is successfully claimed at start of the game                                                                        |
